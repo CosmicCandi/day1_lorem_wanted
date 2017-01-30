@@ -1,6 +1,7 @@
 lipsum_wanted = ARGV[0]
 
-puts "lipsum_wanted value is: #{lipsum_wanted}"
+#This was a debugging step to determine the value of ARGV[0]
+#puts "lipsum_wanted value is: #{lipsum_wanted}"
 
 lipsum1 = "Pansy. We're rescuing ya. Perhaps, but perhaps your civilization is
 merely the sewer of an even greater society above you! Throw her in the brig.
@@ -11,16 +12,16 @@ whom I killed for their stemcells. What are you hacking off? Is it my torso?!
 'It is! ' My precious torso!"
 
 lipsum2 = "And I'd do it again! And perhaps a third time! But that would be it.
- We're also Santa Claus! Are you crazy? I can't swallow that. What are their names?
- I was all of history's great robot actors - Acting Unit 0.8; Thespomat; David
- Duchovny!"
+We're also Santa Claus! Are you crazy? I can't swallow that. What are their names?
+I was all of history's great robot actors - Acting Unit 0.8; Thespomat; David
+Duchovny!"
 
 lipsum3 = "But I've never been to the moon! Incidentally, you have a dime up your
-  nose. I decline the title of Iron Cook and accept the lesser title of Zinc Saucier,
-  which I just made up. Uhh… also, comes with double prize money. Say what? I
-  could if you hadn't turned on the light and shut off my stereo. I saw you with
-  those two 'ladies of the evening' at Elzars. Explain that. You mean while I'm
-  sleeping in it? I am the man with no name, Zapp Brannigan!"
+nose. I decline the title of Iron Cook and accept the lesser title of Zinc Saucier,
+which I just made up. Uhh… also, comes with double prize money. Say what? I
+could if you hadn't turned on the light and shut off my stereo. I saw you with
+those two 'ladies of the evening' at Elzars. Explain that. You mean while I'm
+sleeping in it? I am the man with no name, Zapp Brannigan!"
 
 if lipsum_wanted.to_i == 1
   puts lipsum1
