@@ -1,4 +1,5 @@
 lipsum_wanted = ARGV[0]
+para_wanted = ARGV[1]
 
 #This was a debugging step to determine the value of ARGV[0]
 #puts "lipsum_wanted value is: #{lipsum_wanted}"
@@ -23,12 +24,25 @@ could if you hadn't turned on the light and shut off my stereo. I saw you with
 those two 'ladies of the evening' at Elzars. Explain that. You mean while I'm
 sleeping in it? I am the man with no name, Zapp Brannigan!"
 
-if lipsum_wanted.to_i == 1
-  puts lipsum1
-elsif lipsum_wanted.to_i == 2
-  puts lipsum2
-elsif lipsum_wanted.to_i == 3
-  puts lipsum3
-else
-  puts "Please enter a number 1 to 3"
+#Debugging the value of para_wanted
+#puts "The value of para_wanted is: #{para_wanted}"
+
+#Check to see if the EU has not entered a Number of Paragraphs Argument
+#If not, default the number of paragraphs to one (1).
+if para_wanted.to_i <= 0
+  para_wanted = 1
+end
+
+#This will print the EU's requested Lipsum text via the initial command.
+#We will also (potentially) print multiple paragraphs based on the EU's input
+para_wanted.to_i.times do
+  if lipsum_wanted.to_i == 1
+    puts lipsum1
+  elsif lipsum_wanted.to_i == 2
+    puts lipsum2
+  elsif lipsum_wanted.to_i == 3
+    puts lipsum3
+  else
+    puts "Please enter a number 1 to 3"
+  end
 end
