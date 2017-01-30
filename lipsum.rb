@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 lipsum_wanted = ARGV[0]
 para_wanted = ARGV[1]
 
@@ -43,6 +45,8 @@ para_wanted.to_i.times do
   elsif lipsum_wanted.to_i == 3
     puts lipsum3
   else
-    puts "Please enter a number 1 to 3"
+    puts "Please enter a number 1 to 3. Optionally you can enter a second number
+    to print multiple paragraphs. E.G. 'lipsum.rb 1 2' will use lipsum paragraph
+    1 and print it 2 times."
   end
 end
