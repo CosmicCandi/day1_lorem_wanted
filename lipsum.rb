@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 
-lipsum_wanted = ARGV[0]
-para_wanted = ARGV[1]
+#Based on feedback, added .to_i here, for streamlining purposes
+lipsum_wanted = ARGV[0].to_i
+para_wanted = ARGV[1].to_i
 
 #This was a debugging step to determine the value of ARGV[0]
 #puts "lipsum_wanted value is: #{lipsum_wanted}"
@@ -31,18 +32,18 @@ sleeping in it? I am the man with no name, Zapp Brannigan!"
 
 #Check to see if the EU has not entered a Number of Paragraphs Argument
 #If not, default the number of paragraphs to one (1).
-if para_wanted.to_i <= 0
+if para_wanted <= 0
   para_wanted = 1
 end
 
 #This will print the EU's requested Lipsum text via the initial command.
 #We will also (potentially) print multiple paragraphs based on the EU's input
-para_wanted.to_i.times do
-  if lipsum_wanted.to_i == 1
+para_wanted.times do
+  if lipsum_wanted == 1
     puts lipsum1
-  elsif lipsum_wanted.to_i == 2
+  elsif lipsum_wanted == 2
     puts lipsum2
-  elsif lipsum_wanted.to_i == 3
+  elsif lipsum_wanted == 3
     puts lipsum3
   else
     puts "Please enter a number 1 to 3. Optionally you can enter a second number
