@@ -39,11 +39,12 @@ end
 #This will print the EU's requested Lipsum text via the initial command.
 #We will also (potentially) print multiple paragraphs based on the EU's input
 para_wanted.times do
-  if lipsum_wanted == 1
+  case lipsum_wanted
+  when 1
     puts lipsum1
-  elsif lipsum_wanted == 2
+  when 2
     puts lipsum2
-  elsif lipsum_wanted == 3
+  when 3
     puts lipsum3
   else
     puts "Please enter a number 1 to 3. Optionally you can enter a second number
